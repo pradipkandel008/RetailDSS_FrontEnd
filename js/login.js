@@ -16,12 +16,19 @@ $(document).ready(function(){
             data: data,
             async:true,
             success: function(responseData, textStatus, jqXHR) {
-                if (responseData.message_success!=null) {
+                if (responseData.message_success_normal!=null) {
                     location.href="welcome.html";
                 }
-                else if(responseData.message_error!=null){
+                else if(responseData.message_error_normal!=null){
                     $("#errorModal").modal('show');
-                   $("#err-msg").text(responseData.message_error);
+                   $("#err-msg").text(responseData.message_error_normal);
+                }
+                else if(responseData.message_success_sys!=null){
+                  location.href="welcome2.html";
+                }
+                else if(responseData.message_error_sys!=null){
+                    $("#errorModal").modal('show');
+                   $("#err-msg").text(responseData.message_error_sys);
                 }
                 else{
                   $("#errorModal").modal('show');

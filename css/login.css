@@ -140,7 +140,8 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: #17a2b8
+  background:url("../images/background1.jpg");
+  background-size: 100%;
 }
 
 .wrap-login {
@@ -156,7 +157,6 @@ iframe {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 100px 130px 33px 95px;
-   box-shadow: 0px 0px 140px 25px;
 }
 
 /*------------------------------------------------------------------
