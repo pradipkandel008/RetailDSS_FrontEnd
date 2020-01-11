@@ -12,19 +12,19 @@ $(document).ready(function(){
         console.log(data);
         $.ajax({
             type: "POST",
-            url: "http://localhost:8000/employees/",
+            url: "http://localhost:8000/admin/",
             data: data,
             async:true,
             success: function(responseData, textStatus, jqXHR) {
                 if (responseData.message_success_normal!=null) {
-                    location.href="welcome.html";
+                    location.href="examples/dashboard.html";
                 }
                 else if(responseData.message_error_normal!=null){
                     $("#errorModal").modal('show');
                    $("#err-msg").text(responseData.message_error_normal);
                 }
                 else if(responseData.message_success_sys!=null){
-                  location.href="welcome2.html";
+                  location.href="examples/dashboard.html";
                 }
                 else if(responseData.message_error_sys!=null){
                     $("#errorModal").modal('show');
